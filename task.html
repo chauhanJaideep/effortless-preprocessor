@@ -27,6 +27,7 @@ body {
   font-size: 15px;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
   background-color: rgba(41, 61, 90, 0.99);
+  justify-content: center;
 
 }
 .box p {
@@ -85,6 +86,18 @@ a:hover {
   
 }
 
+.terminal {
+  background-color:rgba(20, 30, 44, 0.99);
+  border: 2px solid black;
+  width: 97%;
+  height: 120%;
+  margin-top: 50px;
+  padding: 20px;
+} 
+.terminal p{
+  color: rgb(100, 255, 218);;
+} 
+
   </style>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
@@ -94,51 +107,109 @@ a:hover {
 <body>
   <div class="wrapper">
   <div class="container">
-    <a href="description.html"class="box box-down cyan">
+    <a class="box box-down Desc" onclick="time1()">
       <h2>DATA DESCRIPTION</h2>
       
     </a>
     
-    
-    <a href="task missing.html" class="box box-down red">
+    <a class="box box-down task" onclick="time2()">
       <h2>TASK MISSING</h2>
       
     </a>
-    <a href="categorical encoding.html"class="box box-down blue">
-      <h2>CATEGORICAL ENCODING</h2>
+    <a class="box box-down handle" onclick="time3()">
+      <h2>HANDLE CATEGORIES</h2>
      
      
     </a>
-    <a href="Feature Scaling.html"class="box box-down blue">
+    <a class="box box-down feature" onclick="time4()">
       <h2>FEATURE SCALING</h2>
         
     </a>
   </div>
 <!-- //--------------------- -->
   <div class="container">
-    <a href="download dataset.html" class="box box-down orange">
-      <h2>DOWNLOAD DATASET</h2>
-     
-     
+     <a  class="box box-down dowload" onclick="time5()" >
+      <h2>DOWLOAD DATASET</h2> 
+     </a>
+     <a class="box box-down split" onclick="time6()">
+      <h2>SPILT DATASET</h2>    
     </a>
-    <a href="split dataset.html" class="box box-down blue">
-      <h2>SPLIT DATASET</h2>
-     
-      
-    </a>
-    <a href="machine learning algorithm.html" class="box box-down red">
-      <h2>ALGORITHM</h2>
-     
-      
-    </a>
-    <a href="get full code.html" class="box box-down cyan">
-      <h2>CODE</h2>
-     
-    </a>
-  </div>
-  </div>
-  </body>
+     <a  class="box box-down red" onclick="time7()">
+      <h2>ALGORITHM</h2>         
+     </a>
+     <a class="box box-down cyan" onclick="time8()">
+      <h2>CODE</h2> 
+     </a>
+   </div>
+</div>
+<div class="holo">
+    <div class="terminal" >
+     <p>->></p>
+
+    </div>
+</div>
+ </body>
 <script >
- 
+ //for link no 1
+ function desciption(){
+   document.querySelector("p").innerHTML="->>loading..." 
+  }
+  function time1(){
+  desciption()
+ setTimeout(change1,1000)
+  }
+  function time2(){
+  desciption()
+ setTimeout(change2,1000)
+  }
+  function time3(){
+  desciption()
+ setTimeout(change3,1000)
+  }
+  function time4(){
+  desciption()
+ setTimeout(change4,1000)
+  }
+  function time5(){
+  desciption()
+ setTimeout(change5,1000)
+  }
+  function time6(){
+  desciption()
+ setTimeout(change6,1000)
+  }
+  function time7(){
+  desciption()
+ setTimeout(change7,1000)
+  }
+  function time8(){
+  desciption()
+ setTimeout(change8,1000)
+  }
+   function change1(){    
+  window.location.href= "description.html"
+   }
+   function change2(){    
+  window.location.href= "task missing.html"
+   }
+   function change3(){    
+  window.location.href= "categorical encoding.html"
+   }
+   function change4(){    
+  window.location.href= "categorical encoding.html"
+   }
+   function change5(){    
+  window.location.href= "download dataset.html"
+   }
+   function change6(){    
+  window.location.href= "split dataset.html"
+   }
+   function change7(){    
+  window.location.href= "machine learning algorithm.html"
+   }
+   function change8(){    
+  window.location.href="get full code.html"
+   }
 </script>
 </html>
+
