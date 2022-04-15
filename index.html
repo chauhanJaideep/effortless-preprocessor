@@ -14,17 +14,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 }
 .heading{
   margin-top: 20px;
   text-align: center;
   font-size: 30px;
-  color: white;
+  color: rgb(100, 255, 218);
 }
 body{
   min-height: 100vh;
-  background: #753BBD;
+  background: rgba(41, 61, 90, 0.99);   
 }
 .holo{
   display: flex;
@@ -39,13 +39,13 @@ body{
 }
 .wrapper{
   width: 463px;
-  background: #fff;
+  background: rgb(36, 33, 33);
   border-radius: 5px;
   padding: 30px;
   box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
 }
 .wrapper header{
-  color: #6990F2;
+  color: rgb(100, 255, 218);
   font-size: 27px;
   font-weight: 600;
   text-align: center;
@@ -59,10 +59,10 @@ body{
   justify-content: center;
   flex-direction: column;
   border-radius: 5px;
-  border: 2px dashed #6990F2;
+  border: 2px dashed rgb(100, 255, 218);
 }
 form :where(i, p){
-  color: #6990F2;
+  color: rgb(100, 255, 218);     
 }
 form i{
   font-size: 50px;
@@ -142,6 +142,10 @@ section .details span{
   color: red;
   font-size: 15px;
 }
+.sucess{
+  color: rgb(191, 226, 191);
+  font-size: 15px;
+}
 
 
   </style>
@@ -159,8 +163,9 @@ section .details span{
       <i class="fas fa-cloud-upload-alt"></i>
       <p>Browse File to Upload</p>
     </form>
-    <a href="column.html">
+    
     <h2 class="warning"></h2>
+    <h2 class="sucess"></h2>
   </div>
 </div>
 
@@ -182,9 +187,16 @@ var allowedExtensions = /(\.csv)$/i;
     document.querySelector(".warning").innerHTML="*Please upload file having extensions .csv"
       fileInput.value = '';
     }else{
-  window.location.href="column.html"
+        desciption()
+        setTimeout(change,2000)
          }
 }
+function change(){    
+  window.location.href= "column.html"
+   }
+function desciption(){
+  document.querySelector(".sucess").innerHTML="sucessfull done loading please wait..."
+  }
 form.addEventListener("click", () =>{
   fileInput.click()
 });
